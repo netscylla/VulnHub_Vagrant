@@ -1,5 +1,13 @@
 #!/bin/sh
 
+if [ $# -eq 0 ]; then
+    echo "Usage:"
+    echo "-----"
+    echo "$0 install - install haymarketers network"
+    echo "$0 uninstall - uninstall haymarketers network"
+    exit 1
+fi
+
 OSTYPE=$(uname -s)
 VBOX=$(which VBoxManage)
 
